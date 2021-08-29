@@ -89,7 +89,7 @@ où $\gamma \in [0,1]$. Avec ce facteur, les récompenses à long terme particip
 Reste à construire des algorithmes autour de cette définition pour correctement paramétré l'agent.
 
 \subsection{La fonction de valeur}
-
+\subsubsection{Définition}
 L'agent suite à une action va atteindre un certain état d l'environnement. Mais comment choisir sa destination et donc l'action ? Il faut pour cela déterminer à quel point il peut être intéressant d'être dans un certain état. 
 L'agent choisira une action parce que elle l'emmènera vers un état qui lui sera favorable en terme de récompense.
 Reste à quantifier cette idée d'état favorable. Il s'agit de la récompense espérée en étant dans l'état $s$ en suivant une politique $\pi$
@@ -99,6 +99,10 @@ v_\pi (S) &= E_\pi \{G_t |s\} \\
 \end{align}
 C'est une équation récursive ($\propto v_\pi$) , elle décrit donc la dynamique d'un épisode complet en partant de l'état $s$. Elle inclue la référence à la récompense à long terme. $s'$ est l'état précédent l'état $s$ et la transition entre $s'$ et $s$ se fait par l'action $a$.
 $p(s,r|s',a)$ décrit la possibilité de passer de l'état $s'$ à l'état $s$ à l'aide de l'action $a$ en obtenant une récompense $r$. La probabilité pouvant bien sur être nulle. La politique $\pi(s,a)$ fournie la liste des actions disponible en étant dans l'état $s$.  
+
+\subsubsection{Calcul}
+Si l'on considère la politique $\pi(s,a)$ et la dynamique du système $p(s,r|s',a)$ comme connus, il est alors possible de calculer les valeurs de $v_\pi(s)$ pour chacun des états.
+\subsubsection{Exemple}
 \section{références}
 https://medium.com/@m.alzantot/deep-reinforcement-learning-demysitifed-episode-2-policy-iteration-value-iteration-and-q-978f9e89ddaa
 \end{document}
