@@ -1,1 +1,1 @@
-# reinforcementlearning
+# Apprentissage par renforcement
